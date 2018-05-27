@@ -775,7 +775,7 @@ begin
     if (Result <> '') and DirExists(Result) then
       goto 1;
   end;
-  Result := GetWinDir;
+  Result := AddBackslash(GetWinDir) + 'temp';
 1:Result := AddBackslash(PathExpand(Result));
 end;
 
